@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.header {
+  line-height: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #c1e9e9;
+  margin: 0 auto;
+  height: 48px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header--button_menu {
+  width: 18px;
+  height: 12px;
+  margin: 0 36px 0 20px;
+  border: none;
+  background: url("./assets/images/Shape_menu.svg") no-repeat;
+  cursor: pointer;
+}
+
+.header--title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  margin: 0 auto 0 0;
+}
+
+.header--button_option {
+  width: 4px;
+  height: 16px;
+  margin: 0 20px 0 5px;
+  border: none;
+  background: url("./assets/images/Shape_option.svg") no-repeat;
+  cursor: pointer;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  grid-row-gap: 50px;
+  -ms-grid-columns: 228px 512px 228px;
+      grid-template-columns: 228px 512px 228px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main_div {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  border: none;
+  margin: 20px 0px 5px 20px;
+  line-height: 25px;
+  padding-left: 35px;
+  cursor: pointer;
+  outline: none;
+}
+
+.tools_wrapper {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  width: 218px;
+  height: 246px;
+}
+
+.tools_wrapper .menu_tools {
+  list-style: none;
+}
+
+.tools_wrapper .menu_tools--paint {
+  background: url("./assets/images/icon-paint.svg") no-repeat;
+}
+
+.tools_wrapper .menu_tools--color {
+  background: url("./assets/images/icon-choose_color.svg") no-repeat;
+}
+
+.tools_wrapper .menu_tools--move {
+  background: url("./assets/images/icon-move.svg") no-repeat;
+}
+
+.tools_wrapper .menu_tools--transform {
+  background: url("./assets/images/icon-transform.svg") no-repeat;
+}
+
+.canvas_wrapper {
+  width: 512px;
+  height: 512px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.size_wrapper {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  width: 218px;
+  height: 246px;
+}
+
+.size_wrapper .menu_size {
+  list-style: none;
+}
+
+.size_wrapper .label {
+  cursor: pointer;
+}
+
+.color_wrapper {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  width: 218px;
+  height: 246px;
+}
+
+.color_wrapper .menu_color--current_color {
+  background: url("./assets/images/Current_color.png") no-repeat;
+}
+
+.color_wrapper .menu_color--prev_color {
+  background: url("./assets/images/Prev_color.png") no-repeat;
+}
+
+.color_wrapper .menu_color--red {
+  background: url("./assets/images/red.png") no-repeat;
+}
+
+.color_wrapper .menu_color--blue {
+  background: url("./assets/images/Blue.png") no-repeat;
+}
+
+#img {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
