@@ -3,3 +3,4 @@ package-lock.json
 rss-codejam-canvas.fig
 .stylelintrc
 .htmlhintrc
+.eslintrc.json

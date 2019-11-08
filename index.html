@@ -14,68 +14,71 @@
   <button class="header--button_option"></button>
 </header>
 <main class="main">
-<div class="main_div tools_wrapper">
-  <ul class="menu_tools">
+  <div class="main_div tools_wrapper">
+    <ul class="menu_tools">
+      <li>
+        <button class="button menu_tools--paint">Paint bucket</button>      
+      </li>
+      <li>
+        <button class="button menu_tools--color">Choose color</button>      
+      </li>
+      <li>
+        <button class="button menu_tools--move">Move</button>      
+      </li>
+      <li>
+        <button class="button menu_tools--transform">Transform</button>      
+      </li>
+    </ul>  
+  </div>
+  <div class="main_div canvas_wrapper">
+    <canvas id="canvas" width="512" height="512">
+    </canvas>    
+  </div>
+  <div class="main_div size_wrapper">
+  <ul class="menu_size">
     <li>
-      <button class="button menu_tools--paint">Paint bucket</button>      
-    </li>
+      <input class="button" type="radio" name="size" id="size4x4" checked>
+        <label class="label" for="size4x4">
+          4x4
+        </label>
+      </li>
     <li>
-      <button class="button menu_tools--color">Choose color</button>      
-    </li>
+      <input class="button" type="radio" name="size" id="size32x32">
+        <label class="label"for="size32x32">
+          32x32
+        </label>
+      </li>
     <li>
-      <button class="button menu_tools--move">Move</button>      
+      <input class="button" type="radio" name="size" id="size256x256">
+        <label class="label" for="size256x256">
+          256x256
+        </label>
     </li>
-    <li>
-      <button class="button menu_tools--transform">Transform</button>      
-    </li>
-   </ul>  
-</div>
-<div class="main_div canvas_wrapper">
-  <canvas id="canvas" width="512" height="512">
-  </canvas>    
-</div>
-<div class="main_div size_wrapper">
-<ul class="menu_size">
-  <li>
-    <input class="button" type="radio" name="size" id="size4x4" checked>
-      <label class="label" for="size4x4">
-        4x4
-      </label>
-    </li>
-  <li>
-    <input class="button" type="radio" name="size" id="size32x32">
-      <label class="label"for="size32x32">
-        32x32
-      </label>
-    </li>
-  <li>
-    <input class="button" type="radio" name="size" id="size256x256">
-      <label class="label" for="size256x256">
-        256x256
-      </label>
-  </li>
-</ul>
+  </ul>
 
 
-</div>
-<div class="main_div color_wrapper">
-  <ul class="menu_color">
-    <li>
-      <button class="button menu_color--current_color">Current_color</button>      
-    </li>
-    <li>
-      <button class="button menu_color--prev_color">Prev color</button>      
-    </li>
-    <li>
-      <button class="button menu_color--red">red</button>      
-    </li>
-    <li>
-      <button class="button menu_color--blue">blue</button>      
-    </li>
-   </ul>  
-</div>
-
+  </div>
+  <div class="main_div color_wrapper">
+    <ul class="menu_color">
+      <li>
+        <button class="button menu_color--current_color">Current_color</button>      
+      </li>
+      <li>
+        <button class="button menu_color--prev_color">Prev color</button>      
+      </li>
+      <li>
+        <button class="button menu_color--red">red</button>      
+      </li>
+      <li>
+        <button class="button menu_color--blue">blue</button>      
+      </li>
+    </ul>  
+  </div>
+  <img src="./data/image.png" id="img" alt="256x256" >
 </main>
+<script src="./data/4x4.js"></script>
+<script src="./data/32x32.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
