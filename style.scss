@@ -1,3 +1,10 @@
+$color-light-blue: #c8e9ee;
+$color-wight: #ffffff;
+$color-green: #02be02;
+$color-yellow: #ffff00;
+$color-blue: #0000ff;
+$color-red: #ff0000;
+
 *{
   margin: 0;
   padding: 0;
@@ -7,13 +14,12 @@
   font-size: 20px;
 }
 
-.header {  
-  
+.header {
   line-height: 23px;
   display: flex;  
   width: 100%;
   max-width: 1440px;
-  background-color: rgb(193, 233, 233);
+  background-color: $color-light-blue;
   margin: 0 auto;  
   height: 48px;
   flex-direction: row;
@@ -47,36 +53,51 @@
 .main {
   display: grid;
   width: 100%;
-  max-width: 1440px;
-  //background-color: rgb(107, 243, 114);
+  max-width: 1440px;  
   margin: 0 auto;  
   grid-row-gap: 50px; 
   grid-template-columns: 228px 512px 228px;
   justify-content: space-between;
 
-  .main_div {
-    //background-color: rgb(251, 226, 0);
+  .main_div {    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
-.button {
-  border: none;  
-  margin: 20px 0px 5px 20px;
-  line-height: 25px;
-  padding-left: 35px; 
-  cursor: pointer;
-  outline: none;
-}
-
 .tools_wrapper {
   align-self: start;
-  width: 218px;
-  height: 246px;
-
+  width: 10em;  
+  margin-left: 1em;
   .menu_tools{
     list-style: none;
-    
+    &--item {
+      border-radius: 0.5em;      
+      line-height: 1em;
+      padding: 1em 2em;
+      cursor: pointer;
+      border: solid 1px $color-wight;
+      
+      &:hover{
+        border: solid 1px $color-light-blue;
+      }
+    }
+    .paint_bucket {
+      background: url("./assets/images/icon-paint.svg") no-repeat;
+      background-position: 5px;      
+    }
+    .choose_color {
+      background: url("./assets/images/icon-choose_color.svg") no-repeat;  
+      background-position: 5px;       
+    }
+    .move {
+      background: url("./assets/images/icon-move.svg") no-repeat;  
+      background-position: 5px;       
+    }
+    .transform {
+      background: url("./assets/images/icon-transform.svg") no-repeat;  
+      background-position: 5px;       
+    }
+
   }
 
   .menu_tools--paint { 
@@ -96,50 +117,84 @@
   }   
 }
 
-.canvas_wrapper {
+.canvas {
   width: 512px;
   height: 512px;    
   grid-row: 1/3;
   grid-column: 2;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
 }
+
 .size_wrapper {
+  margin-right: 1em;
   justify-self: right;
-  width: 218px;
-  height: 246px;
-
+  width: 10em;  
   .menu_size{
-    list-style: none;
+    list-style: none;   
+    &--item{      
+      border-radius: 0.5em;      
+      line-height: 1em;
+      padding: 1em 2em;
+      cursor: pointer;
+      border: solid 1px $color-wight;
+      &:hover{
+        border: solid 1px $color-light-blue;
+      }
+    }
+    .selected{
+      background-color: $color-light-blue;
+    }
+    
   }
 
-  .label {
-    cursor: pointer;   
-  }
 }
 
 .color_wrapper {
   align-self: start;
-  width: 218px;
-  height: 246px;
-  .menu_color--current_color { 
-    background: url("./assets/images/Current_color.png") no-repeat;
-  }
-  
-  .menu_color--prev_color { 
-    background: url("./assets/images/Prev_color.png") no-repeat;
-  }
-  
-  .menu_color--red { 
-    background: url("./assets/images/red.png") no-repeat;
-  }
+  width: 10em;  
+  margin-left: 1em;
+  .menu_color{
+    list-style: none; 
+    &--item{
+      position: relative;            
+      line-height: 1em;
+      padding: 1em 2em;
+      cursor: pointer;
+      border-radius: 0.5em;
+      border: solid 1px $color-wight;
+      &:hover{
+        border: solid 1px $color-light-blue;
+      }      
+    }
+    &--color {
+      position: absolute;    
+      cursor: pointer;
+      height: 1em;
+      width: 1em;    
+      border-radius: 0.5em;
+      border: black solid 1px;      
+      top: 18px;
+      left: 10px;
+    }
+    
+    .current_color { 
+      background-color: $color-green;      
+    }
+    
+    .prev_color { 
+      background-color: $color-yellow;     
+    }
+    
+    .blue_color { 
+      background-color: $color-blue;  
+    }
 
-  .menu_color--blue {
-    background: url("./assets/images/Blue.png") no-repeat;
-  }  
-  
-}
-
-#img{
-  display: none;
+    .red_color { 
+      background-color: $color-red;  
+    }
+  }
 }
 
 
